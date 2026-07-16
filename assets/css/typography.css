@@ -1,0 +1,6 @@
+h1,h2,h3 { font-weight:600; line-height:1.2; letter-spacing:-0.02em; }
+h1 { font-size:clamp(2.2rem, 8vw, 3.8rem); }
+h2 { font-size:clamp(1.8rem, 5vw, 2.8rem); margin-bottom:0.5rem; }
+h3 { font-size:clamp(1.2rem, 3vw, 1.6rem); }
+.section-title { text-align:center; margin-bottom:2.5rem; }
+.section-title span { color:var(--accent); }

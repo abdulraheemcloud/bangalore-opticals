@@ -1,0 +1,375 @@
+/* ========================================
+   PREMIUM COMPONENTS
+   ======================================== */
+
+/* --- Premium Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 0.85rem 2.2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    min-height: 48px;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-accent {
+    background: var(--gold-gradient);
+    color: var(--dark);
+    border-color: var(--gold);
+}
+
+.btn-accent:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-gold-lg);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-outline-light {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline-light:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-gold {
+    background: var(--gold-gradient);
+    color: var(--dark);
+    border-color: var(--gold);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-gold:hover::before {
+    left: 100%;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-gold-lg);
+}
+
+/* --- Premium Cards --- */
+.premium-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-slow);
+    border: 1px solid rgba(212, 168, 83, 0.08);
+    position: relative;
+}
+
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.premium-card:hover::before {
+    transform: scaleX(1);
+}
+
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-gold);
+    border-color: rgba(212, 168, 83, 0.2);
+}
+
+.premium-card .card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.premium-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.premium-card .card-body {
+    padding: var(--spacing-lg);
+}
+
+/* --- Glassmorphism Premium --- */
+.glass-premium {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-base);
+}
+
+.glass-premium:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: var(--shadow-gold);
+    border-color: rgba(212, 168, 83, 0.2);
+}
+
+/* --- Premium Badge --- */
+.badge-premium {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--gold-gradient);
+    color: var(--dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: goldShimmer 3s ease-in-out infinite;
+}
+
+/* --- Luxury Divider --- */
+.divider-luxury {
+    width: 80px;
+    height: 3px;
+    background: var(--gold-gradient);
+    border-radius: var(--radius-full);
+    margin: var(--spacing-md) auto;
+    position: relative;
+}
+
+.divider-luxury::before,
+.divider-luxury::after {
+    content: '◆';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: var(--text-xs);
+}
+
+.divider-luxury::before {
+    left: -20px;
+}
+
+.divider-luxury::after {
+    right: -20px;
+}
+
+/* --- Premium Section Title --- */
+.section-title-premium {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-title-premium h2 {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title-premium p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--text-lg);
+    letter-spacing: 0.02em;
+}
+
+/* --- Premium Stats --- */
+.stat-premium {
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.stat-premium .number {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    line-height: 1;
+}
+
+.stat-premium .label {
+    font-size: var(--text-sm);
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--spacing-sm);
+}
+
+/* --- Premium Brand Card --- */
+.brand-premium {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(212, 168, 83, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-premium::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold-gradient);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.brand-premium:hover::before {
+    opacity: 0.05;
+}
+
+.brand-premium:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+}
+
+.brand-premium img {
+    height: 60px;
+    width: auto;
+    margin: 0 auto var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.brand-premium h4 {
+    position: relative;
+    z-index: 1;
+}
+
+.brand-premium p {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Premium Testimonial --- */
+.testimonial-premium {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.testimonial-premium::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 4rem;
+    color: var(--gold);
+    opacity: 0.1;
+    font-family: Georgia, serif;
+}
+
+.testimonial-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+}
+
+/* --- Input Premium --- */
+.input-premium {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+    background: var(--white);
+    color: var(--dark);
+}
+
+.input-premium:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(212, 168, 83, 0.1);
+    transform: translateY(-1px);
+}
+
+.input-premium::placeholder {
+    color: var(--gray);
+    opacity: 0.6;
+}

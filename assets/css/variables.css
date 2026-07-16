@@ -1,0 +1,68 @@
+/* ========================================
+   VARIABLES - PREMIUM EDITION
+   ======================================== */
+
+:root {
+    /* Colors */
+    --primary: #0b2e4a;
+    --primary-light: #1a4a6e;
+    --primary-dark: #061a2a;
+    
+    /* Gold Palette */
+    --gold: #d4a853;
+    --gold-light: #e8c97a;
+    --gold-dark: #b8923a;
+    --gold-gradient: linear-gradient(135deg, #d4a853 0%, #f0d68a 30%, #d4a853 60%, #b8923a 100%);
+    --gold-shimmer: linear-gradient(135deg, #d4a853 0%, #f5e6b8 25%, #d4a853 50%, #f5e6b8 75%, #d4a853 100%);
+    
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --gray-light: #e8eaed;
+    --gray: #6b7a8a;
+    --gray-dark: #3d4a5a;
+    --dark: #1e2a3a;
+    --black: #0a0e14;
+    
+    /* Premium Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.15);
+    --shadow-gold: 0 8px 40px rgba(212, 168, 83, 0.2);
+    --shadow-gold-lg: 0 20px 60px rgba(212, 168, 83, 0.25);
+    --shadow-glow: 0 0 60px rgba(212, 168, 83, 0.08);
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-base: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-luxury: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    
+    /* Z-Index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal: 1040;
+    --z-popover: 1050;
+    --z-tooltip: 1060;
+    
+    /* Container */
+    --container-max: 1280px;
+    --container-padding: 1.2rem;
+    
+    /* Header */
+    --header-height-desktop: 80px;
+    --header-height-mobile: 68px;
+    
+    /* Premium Effects */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}

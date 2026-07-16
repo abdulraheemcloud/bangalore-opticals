@@ -1,0 +1,286 @@
+/* ========================================
+   PREMIUM PAGE STYLES
+   ======================================== */
+
+/* --- Hero Section Premium --- */
+.hero-premium {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, rgba(11, 46, 74, 0.95) 100%);
+    color: var(--white);
+    padding: var(--spacing-4xl) 0;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Hero Background Particles */
+.hero-premium .particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-premium .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: particleFloat 10s infinite;
+}
+
+/* Hero Gradient Mesh */
+.hero-premium::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(212, 168, 83, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(212, 168, 83, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Hero Shimmer Overlay */
+.hero-premium::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(212, 168, 83, 0.02) 0%, 
+        transparent 30%, 
+        rgba(212, 168, 83, 0.03) 60%, 
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+.hero-premium .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-premium .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(212, 168, 83, 0.15);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    color: var(--gold-light);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-premium .hero-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: goldShimmer 4s ease-in-out infinite;
+}
+
+.hero-premium h1 {
+    color: var(--white);
+    font-size: var(--text-5xl);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-premium h1 .highlight {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-premium p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-lg);
+    max-width: 500px;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+}
+
+.hero-premium .hero-image {
+    position: relative;
+}
+
+.hero-premium .hero-image::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(ellipse at center, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+    border-radius: var(--radius-xl);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+.hero-premium .hero-image img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-slow);
+}
+
+.hero-premium .hero-image:hover img {
+    transform: scale(1.02);
+}
+
+/* --- Stats Section Premium --- */
+.stats-premium {
+    background: var(--primary);
+    padding: var(--spacing-2xl) 0;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.stats-premium .stat-premium .number {
+    font-size: var(--text-5xl);
+}
+
+.stats-premium .stat-premium .label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Gallery Premium --- */
+.gallery-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.gallery-premium .gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+
+.gallery-premium .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-premium .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.gallery-premium .gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-premium .gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* --- Branch Cards Premium --- */
+.branch-premium {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.branch-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(212, 168, 83, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.branch-premium:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+}
+
+/* --- Contact Section Premium --- */
+.contact-premium .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+}
+
+.contact-premium .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.contact-premium .contact-info-item:hover {
+    background: rgba(212, 168, 83, 0.05);
+    transform: translateX(4px);
+}
+
+.contact-premium .contact-icon {
+    font-size: var(--text-2xl);
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 168, 83, 0.1);
+    border-radius: var(--radius-full);
+    color: var(--gold);
+}
+
+/* --- Footer Premium --- */
+.footer-premium {
+    background: var(--primary);
+    color: rgba(255, 255, 255, 0.85);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    margin-top: auto;
+    position: relative;
+}
+
+.footer-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold-gradient);
+}

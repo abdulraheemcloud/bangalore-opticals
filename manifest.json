@@ -1,0 +1,39 @@
+{
+    "name": "Banglore Opticals",
+    "short_name": "BangloreOpticals",
+    "description": "Premium eyewear and eye care since 1899 in Coimbatore",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0b2e4a",
+    "orientation": "portrait-primary",
+    "categories": ["shopping", "health", "lifestyle"],
+    "lang": "en-IN",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "assets/images/favicon/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/images/favicon/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Contact Us",
+            "url": "/contact.html",
+            "description": "Get in touch with Banglore Opticals"
+        },
+        {
+            "name": "View Products",
+            "url": "/products.html",
+            "description": "Browse our eyewear collection"
+        }
+    ]
+}

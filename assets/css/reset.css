@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:var(--font); background:var(--light); color:var(--dark); line-height:1.6; }
+img { max-width:100%; height:auto; display:block; }
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+button { cursor:pointer; font:inherit; border:none; background:none; }

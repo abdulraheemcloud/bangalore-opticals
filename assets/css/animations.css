@@ -1,0 +1,329 @@
+/* ========================================
+   PREMIUM ANIMATIONS
+   ======================================== */
+
+/* --- Gold Shimmer --- */
+@keyframes goldShimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.shimmer-gold {
+    background: var(--gold-gradient);
+    background-size: 200% auto;
+    animation: goldShimmer 3s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* --- Luxury Float --- */
+@keyframes floatLuxury {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.float-luxury {
+    animation: floatLuxury 4s ease-in-out infinite;
+}
+
+@keyframes floatLuxurySlow {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+
+.float-luxury-slow {
+    animation: floatLuxurySlow 6s ease-in-out infinite;
+}
+
+/* --- Text Reveal --- */
+@keyframes revealText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.reveal-text {
+    animation: revealText 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-text-delay-1 { animation-delay: 0.1s; }
+.reveal-text-delay-2 { animation-delay: 0.2s; }
+.reveal-text-delay-3 { animation-delay: 0.3s; }
+.reveal-text-delay-4 { animation-delay: 0.4s; }
+.reveal-text-delay-5 { animation-delay: 0.5s; }
+.reveal-text-delay-6 { animation-delay: 0.6s; }
+.reveal-text-delay-7 { animation-delay: 0.7s; }
+.reveal-text-delay-8 { animation-delay: 0.8s; }
+
+/* --- Gold Glow Pulse --- */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 168, 83, 0.1);
+        border-color: rgba(212, 168, 83, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 168, 83, 0.3);
+        border-color: rgba(212, 168, 83, 0.5);
+    }
+}
+
+.glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* --- Gold Underline Slide --- */
+@keyframes slideGlow {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.slide-glow::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 3px;
+    background: var(--gold-gradient);
+    animation: slideGlow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    border-radius: var(--radius-full);
+}
+
+/* --- Premium Scale --- */
+@keyframes scaleLuxury {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-luxury {
+    animation: scaleLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* --- Stagger Fade --- */
+@keyframes fadeStagger {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-stagger > * {
+    opacity: 0;
+    animation: fadeStagger 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fade-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.fade-stagger > *:nth-child(2) { animation-delay: 0.10s; }
+.fade-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.fade-stagger > *:nth-child(4) { animation-delay: 0.20s; }
+.fade-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.fade-stagger > *:nth-child(6) { animation-delay: 0.30s; }
+.fade-stagger > *:nth-child(7) { animation-delay: 0.35s; }
+.fade-stagger > *:nth-child(8) { animation-delay: 0.40s; }
+
+/* --- Gradient Mesh Background --- */
+@keyframes gradientMesh {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.mesh-bg {
+    background: linear-gradient(135deg, rgba(11, 46, 74, 0.95) 0%, rgba(26, 74, 110, 0.9) 30%, rgba(212, 168, 83, 0.1) 70%, rgba(11, 46, 74, 0.95) 100%);
+    background-size: 400% 400%;
+    animation: gradientMesh 15s ease-in-out infinite;
+}
+
+/* --- Gold Particle Float --- */
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: particleFloat 8s infinite;
+    pointer-events: none;
+}
+
+/* --- Luxury Border Glow --- */
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: rgba(212, 168, 83, 0.2);
+        box-shadow: 0 0 20px rgba(212, 168, 83, 0.05);
+    }
+    50% {
+        border-color: rgba(212, 168, 83, 0.6);
+        box-shadow: 0 0 40px rgba(212, 168, 83, 0.15);
+    }
+}
+
+.border-glow {
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* --- Premium Entrance --- */
+@keyframes premiumEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(40px);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.premium-entrance {
+    animation: premiumEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* --- Gold Sparkle --- */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+.sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* --- Premium Hover Effects --- */
+.hover-lift-gold {
+    transition: all var(--transition-base);
+}
+
+.hover-lift-gold:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+}
+
+/* --- Scroll Triggered Animations --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- Stagger Children on Scroll --- */
+.stagger-scroll > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger-scroll.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-scroll.visible > *:nth-child(2) { transition-delay: 0.10s; }
+.stagger-scroll.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-scroll.visible > *:nth-child(4) { transition-delay: 0.20s; }
+.stagger-scroll.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.stagger-scroll.visible > *:nth-child(6) { transition-delay: 0.30s; }
+
+.stagger-scroll.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
