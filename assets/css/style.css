@@ -2588,3 +2588,132 @@ img, iframe, video {
         border-radius: 0 0 30px 30px !important;
     }
 }
+/* ========================================
+   CORE PURPOSE SECTION - FIXED FOR MOBILE
+   ======================================== */
+
+/* Desktop Layout - 3 columns */
+.core-purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.core-purpose-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    text-align: center;
+    height: 100%;
+}
+
+.core-purpose-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.core-purpose-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.core-purpose-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.core-purpose-card p {
+    color: var(--gray-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   MOBILE FIX - CORE PURPOSE SECTION
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Core Purpose - Stack Vertically */
+    .core-purpose-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+    
+    .core-purpose-card {
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+        padding: 1.5rem !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .core-purpose-icon {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .core-purpose-card h3 {
+        font-size: 1.1rem !important;
+        text-align: center !important;
+    }
+    
+    .core-purpose-card p {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+        line-height: 1.6 !important;
+        padding: 0 !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+    }
+}
+
+/* Extra Small Devices - Additional Fixes */
+@media (max-width: 420px) {
+    .core-purpose-card {
+        max-width: 300px !important;
+        padding: 1.2rem !important;
+    }
+    
+    .core-purpose-icon {
+        font-size: 2rem !important;
+    }
+    
+    .core-purpose-card h3 {
+        font-size: 1rem !important;
+    }
+    
+    .core-purpose-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* Ensure no horizontal scrolling */
+@media (max-width: 768px) {
+    .container {
+        overflow: visible !important;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+    }
+    
+    .core-purpose-grid {
+        overflow: visible !important;
+    }
+}
