@@ -2307,3 +2307,284 @@ img, iframe, video {
         padding: 0 0.5rem;
     }
 }
+/* ========================================
+   ABOUT PAGE - MOBILE RESPONSIVE FIXES
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* About Hero */
+    .hero {
+        padding: 2.5rem 0 2rem !important;
+        border-radius: 0 0 30px 30px !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero p {
+        font-size: 0.95rem !important;
+        padding: 0 0.5rem;
+    }
+
+    /* About Grid - Single Column */
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: left !important;
+    }
+    
+    .about-content {
+        order: 1;
+    }
+    
+    .about-content h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        text-align: left !important;
+    }
+    
+    .about-image-wrapper {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-image-wrapper img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 16px !important;
+    }
+
+    /* Mission, Vision, Values - Single Column */
+    .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+    }
+    
+    .glass-card {
+        padding: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .glass-card h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .glass-card p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Commitment - Single Column */
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .commitment-card {
+        padding: 0 !important;
+        text-align: left !important;
+    }
+    
+    .commitment-card h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .commitment-card p {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        text-align: left !important;
+    }
+
+    /* Stats - 2 Columns on Mobile */
+    .stats-grid-about {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.2rem !important;
+    }
+    
+    .stat-card-about {
+        text-align: center !important;
+        padding: 0.5rem !important;
+    }
+    
+    .stat-card-about h2 {
+        font-size: 2rem !important;
+    }
+    
+    .stat-card-about p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Section Padding */
+    .section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .section-title p {
+        font-size: 0.95rem !important;
+        padding: 0 0.5rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 1.2rem !important;
+        overflow: hidden !important;
+    }
+
+    /* Divider */
+    .divider {
+        margin: 0.8rem 0 !important;
+        width: 50px !important;
+    }
+
+    /* CTA Section */
+    .text-center h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .text-center p {
+        font-size: 0.95rem !important;
+        padding: 0 0.5rem;
+    }
+    
+    .text-center .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    /* Fix overflow */
+    body {
+        overflow-x: hidden !important;
+    }
+    
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ========================================
+   ABOUT PAGE - EXTRA SMALL DEVICES
+   ======================================== */
+
+@media (max-width: 420px) {
+    .hero h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero p {
+        font-size: 0.85rem !important;
+    }
+    
+    .about-content h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .about-content p {
+        font-size: 0.85rem !important;
+    }
+    
+    .about-image-wrapper img {
+        max-width: 280px;
+    }
+    
+    .glass-card {
+        padding: 1rem !important;
+    }
+    
+    .glass-card h3 {
+        font-size: 1rem !important;
+    }
+    
+    .glass-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .commitment-card h3 {
+        font-size: 0.95rem !important;
+    }
+    
+    .commitment-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .stat-card-about h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .stat-card-about p {
+        font-size: 0.75rem !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .section-title p {
+        font-size: 0.85rem !important;
+    }
+    
+    .text-center h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .text-center .btn {
+        max-width: 240px;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+        min-height: 40px;
+    }
+    
+    .stats-grid-about {
+        gap: 0.8rem !important;
+    }
+}
+
+/* ========================================
+   ABOUT PAGE - TABLET (576px - 768px)
+   ======================================== */
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .about-image-wrapper img {
+        max-width: 400px;
+    }
+    
+    .stats-grid-about {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ========================================
+   FIX FOR HERO ON ALL PAGES
+   ======================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2.5rem 0 2rem !important;
+        border-radius: 0 0 30px 30px !important;
+    }
+}
