@@ -1,15 +1,26 @@
-# robots.txt for Banglore Opticals
-# https://bangloreopticals.com/robots.txt
+# robots.txt for Bangalore Opticals
+# Official Domain: https://bangaloreopticals.in
 
 User-agent: *
 Allow: /
 
+# Allow all public HTML pages
+Allow: /index.html
+Allow: /about.html
+Allow: /products.html
+Allow: /services.html
+Allow: /testimonials.html
+Allow: /contact.html
+
+# Allow essential assets
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Disallow admin or private areas (none exist)
+
 # Sitemap location
-Sitemap: https://bangloreopticals.com/sitemap.xml
+Sitemap: https://bangaloreopticals.in/sitemap.xml
 
-# Crawl delay for slower servers
+# Crawl delay for better server performance
 Crawl-delay: 1
-
-# Disallow admin or private areas
-Disallow: /assets/
-Disallow: /documents/
