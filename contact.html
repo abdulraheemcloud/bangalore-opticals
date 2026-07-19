@@ -39,6 +39,7 @@
                     <div>
                         <h3>📞 Contact Information</h3>
                         <div style="margin: 1.5rem 0;">
+                            <!-- Phone -->
                             <div class="contact-item">
                                 <span class="contact-icon">📱</span>
                                 <div>
@@ -46,6 +47,8 @@
                                     <p><a href="tel:9843312423">9843312423</a></p>
                                 </div>
                             </div>
+                            
+                            <!-- Alternate Phone -->
                             <div class="contact-item">
                                 <span class="contact-icon">📱</span>
                                 <div>
@@ -53,6 +56,17 @@
                                     <p><a href="tel:9843343300">9843343300</a></p>
                                 </div>
                             </div>
+                            
+                            <!-- Customer Support -->
+                            <div class="contact-item">
+                                <span class="contact-icon">🎧</span>
+                                <div>
+                                    <h5>Customer Support</h5>
+                                    <p><a href="tel:+917502402502">7502402502</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- WhatsApp -->
                             <div class="contact-item">
                                 <span class="contact-icon">💬</span>
                                 <div>
@@ -60,6 +74,8 @@
                                     <p><a href="https://wa.me/919843312423" target="_blank" rel="noopener">9843312423</a></p>
                                 </div>
                             </div>
+                            
+                            <!-- Email -->
                             <div class="contact-item">
                                 <span class="contact-icon">✉️</span>
                                 <div>
@@ -67,6 +83,8 @@
                                     <p><a href="mailto:newbangaloreopticals@gmail.com">newbangaloreopticals@gmail.com</a></p>
                                 </div>
                             </div>
+                            
+                            <!-- Working Hours -->
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
                                 <div>
@@ -82,15 +100,30 @@
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
+                    <!-- Contact Form - FORMSFREE INTEGRATED -->
                     <div>
                         <h3>📝 Send a Message</h3>
                         <p style="margin-bottom: 1.2rem; color: var(--gray);">We'll respond within 24 hours</p>
-                        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
-                            <input type="text" id="contactName" placeholder="Your Name" required>
-                            <input type="email" id="contactEmail" placeholder="Email Address" required>
-                            <input type="tel" id="contactPhone" placeholder="Phone Number" required>
-                            <select id="contactService" required>
+                        
+                        <!-- Success Message -->
+                        <div id="formSuccess" style="display:none; background: #d4edda; color: #155724; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; border-left: 4px solid #28a745;">
+                            <p style="margin: 0; font-weight: 500;">✅ Thank you! Your enquiry has been sent successfully. Our team will contact you soon.</p>
+                        </div>
+                        
+                        <!-- Error Message -->
+                        <div id="formError" style="display:none; background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; border-left: 4px solid #dc3545;">
+                            <p style="margin: 0; font-weight: 500;">❌ Sorry, something went wrong. Please try again or contact us directly.</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm" 
+                              action="https://formspree.io/f/mbdnoqzn" 
+                              method="POST">
+                            
+                            <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+                            <input type="email" id="contactEmail" name="email" placeholder="Email Address" required>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Phone Number" required>
+                            
+                            <select id="contactService" name="service" required>
                                 <option value="">Select a service</option>
                                 <option value="Eye Testing">Eye Testing</option>
                                 <option value="Lens Consultation">Lens Consultation</option>
@@ -110,23 +143,32 @@
                                 <option value="Eye Consultation for Cataract">Eye Consultation for Cataract</option>
                                 <option value="Nature Cure Centre for Cataract & Eye Disorders">Nature Cure Centre for Cataract & Eye Disorders</option>
                                 <option value="Eye Testing by Experienced Expert Optometrists">Eye Testing by Experienced Expert Optometrists</option>
+                                <option value="Customer Support">Customer Support</option>
                             </select>
-                            <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
-                            <button type="submit" class="btn btn-accent" style="width: 100%;">Send Message</button>
+                            
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            
+                            <!-- Hidden Fields -->
+                            <input type="hidden" name="_subject" value="New Enquiry - Bangalore Opticals Website">
+                            <input type="hidden" name="source" value="Bangalore Opticals Website">
+                            
+                            <button type="submit" id="submitBtn" class="btn btn-accent" style="width: 100%;">
+                                Send Message
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- BRANCHES WITH GOOGLE MAPS -->
+        <!-- BRANCHES & CUSTOMER SUPPORT -->
         <section class="section" style="background: var(--white);" id="branches">
             <div class="container">
                 <div class="section-title">
-                    <h2>Our <span>Branches</span></h2>
+                    <h2>Our <span>Branches</span> & Support</h2>
                 </div>
-                <div class="branch-grid">
-                    <!-- Head Office Card -->
+                <div class="branch-grid-three">
+                    <!-- Head Office Card with Map -->
                     <div class="branch-card">
                         <div class="branch-icon">🏛️</div>
                         <h3>Head Office</h3>
@@ -137,7 +179,6 @@
                             <a href="tel:9843312423" class="btn btn-sm btn-accent">📞 Call</a>
                             <a href="https://wa.me/919843312423" target="_blank" rel="noopener" class="btn btn-sm" style="background:#25D366; color:white;">💬 WhatsApp</a>
                         </div>
-                        <!-- Head Office Google Map -->
                         <div class="branch-map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5785318707663!2d76.95673637415884!3d10.995151255123005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8590bfc5ac359%3A0x2c66cfd0ef04ff4a!2sBangalore%20Opticals!5e0!3m2!1sen!2sin!4v1784208645332!5m2!1sen!2sin"
@@ -146,12 +187,28 @@
                                 style="border:0;"
                                 loading="lazy"
                                 allowfullscreen
-                                referrerpolicy="strict-origin-when-cross-origin">
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="Bangalore Opticals Head Office Location">
                             </iframe>
                         </div>
                     </div>
 
-                    <!-- Peelamedu Branch Card -->
+                    <!-- Customer Support Card - NO MAP -->
+                    <div class="branch-card support-card">
+                        <div class="branch-icon">🎧</div>
+                        <h3>Customer Support</h3>
+                        <p class="support-text">Always available to assist you</p>
+                        <p class="phone"><strong>Phone:</strong> <a href="tel:+917502402502">7502402502</a></p>
+                        <div class="branch-actions support-actions">
+                            <a href="tel:+917502402502" class="btn btn-sm btn-accent">📞 Call</a>
+                            <a href="https://wa.me/917502402502" target="_blank" rel="noopener" class="btn btn-sm" style="background:#25D366; color:white;">💬 WhatsApp</a>
+                        </div>
+                        <div class="support-note">
+                            <span>💬 Available via Call & WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <!-- Peelamedu Branch Card with Map -->
                     <div class="branch-card">
                         <div class="branch-icon">🏬</div>
                         <h3>Peelamedu Branch</h3>
@@ -162,7 +219,6 @@
                             <a href="tel:9843343300" class="btn btn-sm btn-accent">📞 Call</a>
                             <a href="https://wa.me/919843343300" target="_blank" rel="noopener" class="btn btn-sm" style="background:#25D366; color:white;">💬 WhatsApp</a>
                         </div>
-                        <!-- Peelamedu Branch Google Map -->
                         <div class="branch-map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6779.192017044988!2d77.00299116334662!3d11.025205360990487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85828d90d0e7d%3A0x9af38aaebce31c91!2sBangalore%20Optical%20Company!5e0!3m2!1sen!2sin!4v1784208852221!5m2!1sen!2sin"
@@ -171,7 +227,8 @@
                                 style="border:0;"
                                 loading="lazy"
                                 allowfullscreen
-                                referrerpolicy="strict-origin-when-cross-origin">
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="Bangalore Opticals Peelamedu Branch Location">
                             </iframe>
                         </div>
                     </div>
@@ -186,19 +243,67 @@
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
     
+    <!-- Formspree Integration Script -->
     <script>
-    function handleFormSubmit(event) {
-        event.preventDefault();
+    (function() {
+        'use strict';
         
-        const name = document.getElementById('contactName').value;
-        const phone = document.getElementById('contactPhone').value;
-        const service = document.getElementById('contactService').value;
-        const message = document.getElementById('contactMessage').value;
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successDiv = document.getElementById('formSuccess');
+        const errorDiv = document.getElementById('formError');
         
-        const whatsappMessage = `Hello Bangalore Opticals,%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
-        
-        window.open(`https://wa.me/919843312423?text=${whatsappMessage}`, '_blank');
-    }
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Hide any previous messages
+                successDiv.style.display = 'none';
+                errorDiv.style.display = 'none';
+                
+                // Disable submit button to prevent multiple submissions
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.cursor = 'not-allowed';
+                
+                try {
+                    const formData = new FormData(form);
+                    
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Success
+                        successDiv.style.display = 'block';
+                        form.reset();
+                        
+                        // Scroll to success message
+                        successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        // Error
+                        errorDiv.style.display = 'block';
+                        errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } catch (error) {
+                    // Network error
+                    errorDiv.style.display = 'block';
+                    errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.cursor = 'pointer';
+                }
+            });
+        }
+    })();
     </script>
 </body>
 </html>
